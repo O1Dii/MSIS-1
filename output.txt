@@ -1,0 +1,351 @@
+
+-----OPERATORS:-----
+
+BUILD - 2
+BUILDALLPLAN - 1
+BUILDPLAN - 3
+add_attribute - 1
+add_dispatchee - 2
+add_method - 1
+add_multi_method - 1
+add_parent - 3
+add_role - 2
+apply - 1
+archetypes - 1
+atkey - 1
+attributes - 7
+c3_merge - 3
+cache - 4
+cache_add - 2
+cache_get - 1
+can - 6
+clone - 1
+compose - 3
+compose_repr - 2
+composetype - 1
+compute_c3_mro - 5
+coolmethod - 3
+create - 1
+create_BUILDPLAN - 2
+defined - 7
+derive_dispatcher - 1
+does - 1
+elems - 14
+eqat - 1
+existskey - 3
+find_method - 2
+flush_cache - 2
+found - 1
+hash - 3
+incorporate_multi_candidates - 1
+inheritable - 1
+is_mixin - 3
+isa - 1
+isconcrete - 1
+ishash - 3
+isnull - 6
+iterkey_s - 2
+iterval - 3
+list - 9
+local - 2
+make_tracer - 3
+method_table - 7
+methods - 2
+mixin - 3
+mro - 9
+name - 8
+new - 3
+new_type - 2
+newtype - 1
+nominal - 1
+null - 9
+parents - 3
+publish_boolification_spec - 3
+publish_method_cache - 4
+publish_type_cache - 3
+push - 27
+rebless - 1
+reparent - 1
+repr - 1
+reverse - 3
+role_typecheck_list - 2
+roles - 1
+say - 1
+scwbdisable - 3
+scwbenable - 3
+set_default_parent - 1
+set_is_mixin - 2
+setboolspec - 2
+setdebugtypename - 1
+setmethcache - 2
+setmethcacheauth - 3
+settypecache - 1
+setwho - 1
+shortname - 1
+should_trace - 3
+specialize - 1
+substr - 2
+trace-off - 1
+trace-on - 1
+trace_depth - 1
+traced - 1
+unshift - 3
+value_generator - 1
+where - 1
+!!! - 0
+!= - 3
+?? !! - 10
+@! - 74
+@ - 90
+! - 74
+.& - 0
+%% - 0
+%= - 0
+% - 56
+&& - 7
+~& - 0
++& - 0
+& - 0
+**= - 0
+** - 0
+*= - 0
+.* - 0
+* - 2
+( ) - 421
+++ - 0
+<< - 0
+>> - 0
++< - 0
++> - 0
++^ - 0
++| - 0
+.+ - 0
++= - 0
++ - 6
+, - 124
+-- - 0
+-= - 0
+- - 11
+.:: - 0
+... - 0
+^..^ - 0
+..^ - 0
+.. - 0
+.: - 0
+.= - 0
+.? - 0
+.^ - 0
+// - 2
+/= - 0
+/ - 0
+::= - 0
+=:= - 9
+:= - 120
+:: - 16
+<== - 0
+<=> - 0
+<= - 1
+< > - 13
+: - 19
+=== - 0
+==> - 0
+== - 3
+=> - 0
+-> - 0
+=~= - 0
+>= - 0
+= - 10
+> - 7
+< - 1
+??? - 0
+?^ - 0
+?| - 0
+? - 1
+X - 0
+Z - 0
+[ ] - 16
+^.. - 0
+^^ - 0
+~^ - 0
+^ - 0
+|| - 2
+| - 2
+~< - 0
+~> - 0
+~| - 0
+~~ - 0
+~ - 10
+. - 18
+if - 41
+while - 7
+unless - 10
+for - 32
+local - 14
+push - 0
+defined - 0
+reverse - 4
+pos - 13
+eq - 4
+; - 249
+
+-----OPERANDS:-----
+
+"This class already has a method named " - 1
+"Cannot add a null method '$name' to class '$!name'" - 1
+"This class already has an attribute named " - 1
+"NQPClassHOW does not support adding parents after being composed." - 1
+"Class '$!name' cannot inherit from itself." - 1
+"Already have " - 1
+" as a parent class." - 1
+"Can only re-parent a class with exactly one parent" - 1
+"Can only re-parent a class whose parent has no attributes" - 1
+"Can only re-parent to a class with no attributes" - 1
+"The role " - 1
+" has already been added." - 1
+"Cannot have a multi candidate for $name when an only method is also in the class" - 1
+"Could not find a proto for multi $name (it may exist, but an only is hiding it if so)" - 1
+"Could not find a proto for multi $name, and proto generation is NYI" - 1
+"Could not build C3 linearization: ambiguous hierarchy" - 1
+"OPOPOP" - 1
+"Calling $name" - 1
+'<anon>' - 4
+'P6opaque' - 1
+'NQPMu' - 1
+'auto_viv_container' - 1
+'is_dispatcher' - 2
+'role_typecheck_list' - 1
+'Bool' - 1
+'@' - 1
+'%' - 1
+'build' - 1
+'::' - 1
+'+{' - 1
+'}' - 1
+'  ' - 1
+'!' - 1
+ multi_methods_to_incorporate - 6
+ associative_delegate - 1
+ something_accepted - 3
+ auto_viv_container - 1
+ immediate_parents - 6
+ specialized_roles - 3
+ itional_delegate - 1
+ value_generator - 1
+ trace_cachename - 1
+ default_parent - 3
+ trace_exclude - 3
+ is_dispatcher - 2
+ BUILDALLPLAN - 4
+ method_order - 4
+ methodsname - 3
+ NQPClassHOW - 1
+ trace_depth - 9
+ mixin_cache - 7
+ trace_cache - 2
+ no_fallback - 1
+ new_parent - 3
+ box_target - 1
+ cand_count - 4
+ orig_cache - 5
+ dispatcher - 8
+ attributes - 5
+ cand_class - 3
+ merge_list - 11
+ archetypes - 2
+ cacheskey - 1
+ meta_attr - 3
+ bool_meth - 3
+ metaclass - 1
+ attr_name - 4
+ methsname - 3
+ type_info - 5
+ attr_info - 8
+ cand_list - 4
+ repr_info - 3
+ BUILDPLAN - 4
+ rejected - 3
+ new_name - 2
+ num_todo - 2
+ is_mixin - 4
+ new_disp - 2
+ code_obj - 7
+ new_list - 3
+ accepted - 4
+ all_plan - 3
+ no_trace - 2
+ new_type - 6
+ type_obj - 4
+ parents - 9
+ exclude - 2
+ methods - 4
+ default - 3
+ copykey - 1
+ knowhow - 1
+ c_role - 2
+ caches - 12
+ result - 12
+ parent - 9
+ c_type - 2
+ sigop - 2
+ split - 1
+ named - 2
+ trace - 6
+ found - 11
+ class - 6
+ value - 3
+ depth - 2
+ attrs - 10
+ check - 6
+ cache - 2
+ roles - 7
+ build - 4
+ sigil - 3
+ meths - 7
+ parts - 3
+ repr - 2
+ todo - 4
+ 0obj - 1
+ self - 2
+ WHAT - 2
+ mro_ - 4
+ name - 37
+ code - 1
+ plan - 5
+ attr - 8
+ cur_ - 5
+ copy - 2
+ type - 1
+ done - 7
+ role - 9
+ last - 1
+ info - 3
+ REPR - 1
+ can - 3
+ nqp - 15
+ com - 5
+ out - 3
+ ins - 3
+ die - 14
+ key - 6
+ HOW - 1
+ obj - 26
+ mro - 20
+ all - 1
+ has - 19
+ tc - 4
+ 11 - 1
+ 12 - 1
+ ed - 5
+ ne - 1
+ in - 2
+ _ - 37
+ i - 27
+ d - 4
+ x - 1
+ 5 - 1
+ 1 - 35
+ 0 - 38
+ m - 1
+ 2 - 1
+ j - 5
+ 4 - 1

@@ -1,0 +1,685 @@
+knowhow NQPClassHOW 
+
+    #asdf123456*****...
+
+   
+   
+   
+   
+   
+
+    has !name;
+    has @!attributes;
+    has %!methods;
+    has @!method_order;
+    has @!multi_methods_to_incorporate;
+    has @!parents;
+    has @!roles;
+    has !default_parent;
+    has !composed;
+    has @!mro;
+    has @!done;
+    has %!caches;
+    has !is_mixin;
+    has !trace;
+    has !trace_depth;
+    has @!trace_exclude;
+    has @!BUILDALLPLAN;
+    has @!BUILDPLAN;
+
+   coolmethod(asdasd
+
+    a::coolmethod(
+    a.coolmethod(
+
+   archetypes := Archetypes.new( :nominal(1, :inheritable(1 ;
+   archetypes( 
+        archetypes
+    
+
+   new(:name = 
+       obj := nqp::create(self;
+        obj.BUILD(:name(name;
+        obj
+    
+
+   BUILD(:name = 
+        !name := name;
+        @!attributes := nqp::list(;
+        %!methods := nqp::hash(;
+        @!method_order := nqp::list(;
+        @!multi_methods_to_incorporate := nqp::list(;
+        @!parents := nqp::list(;
+        @!roles := nqp::list(;
+        @!mro := nqp::list(;
+        @!done := nqp::list(;
+        @!BUILDALLPLAN := nqp::list(;
+        @!BUILDPLAN := nqp::list(;
+        !is_mixin := 0;
+        !trace := 0;
+        !trace_depth := 0;
+        !composed := 0;
+    
+
+   new_type(:name =, :repr = 
+       metaclass := self.new(:name(name;
+        nqp::setdebugtypename(
+            nqp::setwho(nqp::newtype(metaclass, repr, ,
+            name;
+    
+
+   add_method(obj, name, code_obj 
+        if nqp::existskey(%!methods, name 
+            nqp::die ~ name;
+        
+        if nqp::isnull(code_obj || !nqp::defined(code_obj 
+            nqp::die;
+        
+        nqp::setmethcacheauth(obj, 0;
+        %!cachesnqp::where(self :=  unless nqp::isnull(%!caches;
+        nqp::push(@!method_order, %!methodsname := code_obj;
+    
+
+   add_multi_method(obj, name, code_obj 
+
+       %todo;
+        %todo<name> := name;
+        %todo<code> := code_obj;
+        nqp::push(@!multi_methods_to_incorporate, %todo;
+        nqp::setmethcacheauth(obj, 0;
+        code_obj;
+    
+
+   add_attribute(obj, meta_attr 
+       name := meta_attr.name;
+        for @!attributes 
+            if _.name eq name 
+                nqp::die ~ name;
+            
+        
+        nqp::push(@!attributes, meta_attr;
+    
+
+   add_parent(obj, parent 
+        if !composed 
+            nqp::die;
+        
+        if obj =:= parent 
+            nqp::die;
+        
+        for @!parents 
+            if _ =:= parent 
+                nqp::die ~ parent ~;
+            
+        
+        nqp::push(@!parents, parent;
+    
+
+   set_default_parent(obj, parent 
+        !default_parent := parent;
+    
+
+   reparent(obj, new_parent 
+        if nqp::elems(@!parents != 1 
+            nqp::die;
+        
+        for @!parents[0.HOW.mro(@!parents[0 
+            if nqp::elems(_.HOW.attributes(_, :local 
+                nqp::die;
+            
+        
+        for new_parent.HOW.mro(new_parent 
+            if nqp::elems(_.HOW.attributes(_, :local 
+                nqp::die;
+            
+        
+        @!parents[0 := new_parent;
+        @!mro := compute_c3_mro(obj;
+        self.publish_type_cache(obj;
+        self.publish_method_cache(obj;
+        self.publish_boolification_spec(obj;
+        1;
+    
+
+   add_role(obj, role 
+        for @!roles 
+            if _ =:= role 
+                nqp::die ~ role ~;
+            
+        
+        nqp::push(@!roles, role;
+    
+
+   compose(obj 
+
+        if @!roles 
+           @specialized_roles;
+            for @!roles 
+               ins := _.HOW.specialize(_, obj;
+                nqp::push(@specialized_roles, ins;
+                nqp::push(@!done, _;
+                nqp::push(@!done, ins;
+            
+            RoleToClassApplier.apply(obj, @specialized_roles;
+        
+
+        if nqp::elems(@!parents == 0 && !name ne 
+            self.add_parent(obj, !default_parent
+        
+
+        @!mro := compute_c3_mro(obj;
+
+        self.incorporate_multi_candidates(obj;
+
+        for self.attributes(obj, :local(0   _.compose(obj 
+
+        self.publish_type_cache(obj;
+        self.publish_method_cache(obj;
+        self.publish_boolification_spec(obj;
+
+        self.create_BUILDPLAN(obj;
+
+        unless !composed 
+            self.compose_repr(obj;
+        
+
+        !composed := 1;
+
+        obj
+    
+
+   compose_repr(obj 
+
+       @repr_info;
+
+        for @!mro -> type_obj 
+           @type_info;
+            nqp::push(@repr_info, @type_info;
+
+            nqp::push(@type_info, type_obj;
+
+           @attrs;
+            nqp::push(@type_info, @attrs;
+            for type_obj.HOW.attributes(type_obj, :local -> attr 
+               %attr_info;
+                %attr_info<name> := attr.name;
+                %attr_info<type> := attr.type;
+                if attr.box_target 
+ 
+                    %attr_info<box_target> := 1;
+                
+                if nqp::can(attr, 
+                    %attr_info<auto_viv_container> := attr.auto_viv_container;
+                
+                if attr.positional_delegate 
+                    %attr_info<positional_delegate> := 1;
+                
+                if attr.associative_delegate 
+                    %attr_info<associative_delegate> := 1;
+                
+                nqp::push(@attrs, %attr_info;
+            
+
+            nqp::push(@type_info, type_obj.HOW.parents(type_obj, :local;
+        
+
+       info := nqp::hash(;
+        info<attribute> := @repr_info;
+        nqp::composetype(obj, info
+    
+
+   incorporate_multi_candidates(obj 
+       num_todo := nqp::elems(@!multi_methods_to_incorporate;
+       i := 0;
+        while i != num_todo 
+ 
+           name := @!multi_methods_to_incorporate[i<name>;
+           code := @!multi_methods_to_incorporate[i<code>;
+
+           dispatcher := %!methodsname;
+            if nqp::defined(dispatcher 
+
+                if nqp::can(dispatcher, && dispatcher.is_dispatcher 
+                    dispatcher.add_dispatchee(code;
+                
+               
+                    nqp::die;
+                
+            
+           
+ 
+               j := 1;
+               found := 0;
+                while j != nqp::elems(@!mro && !found 
+                   parent := @!mro[j;
+                   %meths := parent.HOW.method_table(parent;
+                   dispatcher := %methsname;
+                    if nqp::defined(dispatcher 
+
+                        if nqp::can(dispatcher, && dispatcher.is_dispatcher 
+                           new_disp := dispatcher.derive_dispatcher(;
+                            new_disp.add_dispatchee(code;
+                            %!methodsname := new_disp;
+                            found := 1;
+                        
+                       
+                            nqp::die;
+                        
+                    
+                    j := j + 1;
+                
+                unless found 
+                    nqp::die;
+                
+            
+            i := i + 1;
+        
+    
+
+   compute_c3_mro(class 
+       @immediate_parents := class.HOW.parents(class, :local;
+
+       @result;
+        if nqp::elems(@immediate_parents 
+            if nqp::elems(@immediate_parents == 1 
+                @result := compute_c3_mro(@immediate_parents[0;
+            
+ 
+               @merge_list;
+                for @immediate_parents 
+                    nqp::push(@merge_list, compute_c3_mro(_;
+                
+                nqp::push(@merge_list, @immediate_parents;
+                @result := c3_merge(@merge_list;
+            
+        
+
+        nqp::unshift(@result, class;
+       @result;
+    
+
+   c3_merge(@merge_list 
+       @result;
+       accepted;
+       something_accepted := 0;
+       cand_count := 0;
+
+        for @merge_list 
+           @cand_list := _;
+            if @cand_list 
+               rejected := 0;
+               cand_class := @cand_list[0;
+                cand_count := cand_count + 1;
+                for @merge_list 
+ 
+                    unless _ =:= @cand_list 
+ 
+                       cur_pos := 1;
+                        while cur_pos <= nqp::elems(_ 
+                            if _[cur_pos =:= cand_class 
+                                rejected := 1;
+                            
+                            cur_pos := cur_pos + 1;
+                        
+                    
+                
+
+                unless rejected 
+                    accepted := cand_class;
+                    something_accepted := 1;
+                    last;
+                
+            
+        
+
+        if cand_count == 0 
+           @result;
+        
+
+        unless something_accepted 
+            nqp::die;
+        
+
+       i := 0;
+        while i < nqp::elems(@merge_list 
+           @new_list;
+            for @merge_list[i 
+                unless _ =:= accepted 
+                    nqp::push(@new_list, _;
+                
+            
+            @merge_list[i := @new_list;
+            i := i + 1;
+        
+
+        @result := c3_merge(@merge_list;
+        nqp::unshift(@result, accepted;
+       @result;
+    
+
+   publish_type_cache(obj 
+       @tc;
+
+        for self.mro(obj 
+            nqp::push(@tc, _;
+            if nqp::can(_.HOW, 
+                for _.HOW.role_typecheck_list(_ 
+                    nqp::push(@tc, _;
+                
+            
+        
+
+        nqp::settypecache(obj, @tc
+    
+
+   reverse(@in 
+       @out;
+        for @in  nqp::unshift(@out, _ 
+        @out
+    
+
+   publish_method_cache(obj 
+
+       %cache;
+       @mro_reversed := reverse(@!mro;
+        for @mro_reversed 
+            for _.HOW.method_table(_ 
+                %cachenqp::iterkey_s(_ := nqp::iterval(_;
+            
+        
+        nqp::setmethcache(obj, %cache;
+        nqp::setmethcacheauth(obj, 1;
+    
+
+   publish_boolification_spec(obj 
+       bool_meth := self.find_method(obj,;
+        if nqp::defined(bool_meth 
+            nqp::setboolspec(obj, 0, bool_meth
+        
+       
+            nqp::setboolspec(obj, 5, nqp::null(
+        
+    
+
+   create_BUILDPLAN(obj 
+ 
+       @plan;
+       @attrs := obj.HOW.attributes(obj, :local(1;
+
+       build := obj.HOW.method_table(obj<BUILD>;
+        if nqp::defined(build 
+ 
+            nqp::push(@plan, build;
+        
+       
+
+            for @attrs 
+               attr_name := _.name;
+               name      := nqp::substr(attr_name, 2;
+               sigil     := nqp::substr(attr_name, 0, 1;
+               sigop     := sigil eq ?? 11 !! sigil eq ?? 12 !! 0;
+                nqp::push(@plan, [sigop, obj, attr_name, name;
+            
+        
+
+        for @attrs 
+            if nqp::can(_, 
+               default := _.build;
+                if nqp::defined(default 
+                    nqp::push(@plan, [4, obj, _.name, default;
+                
+            
+        
+
+        @!BUILDPLAN := @plan;
+
+       @all_plan;
+       @mro := self.mro(obj;
+       i := nqp::elems(@mro;
+        while i > 0 
+            i := i - 1;
+           class := @mro[i;
+            for class.HOW.BUILDPLAN(class 
+                nqp::push(@all_plan, _;
+            
+        
+        @!BUILDALLPLAN := @all_plan;
+    
+
+   BUILDPLAN(obj 
+        @!BUILDPLAN
+    
+
+   BUILDALLPLAN(obj 
+        @!BUILDALLPLAN
+    
+
+   parents(obj, :local = 0 
+        local ?? @!parents !! @!mro
+    
+
+   mro(obj 
+        @!mro
+    
+
+   roles(obj, :local! 
+        @!roles
+    
+
+   role_typecheck_list(obj 
+        @!done;
+    
+
+   methods(obj, :local = 0, :all 
+        if local 
+            @!method_order
+        
+       
+           @meths;
+            for @!mro 
+                for _.HOW.methods(_, :local 
+                    nqp::push(@meths, _
+                
+            
+            @meths
+        
+    
+
+   method_table(obj 
+        %!methods
+    
+
+   name(obj 
+        !name
+    
+
+   shortname(obj 
+       @parts := nqp::split, self.name(obj //;
+        @parts ?? @parts[nqp::elems(@parts - 1 !!
+    
+
+   traced(obj 
+        !trace
+    
+
+   trace_depth(obj 
+        !trace_depth
+    
+
+   attributes(obj, :local = 0 
+       @attrs;
+        if local 
+            for @!attributes 
+                nqp::push(@attrs, _;
+            
+        
+       
+            for @!mro 
+                for _.HOW.attributes(_, :local 
+                    nqp::push(@attrs, _;
+                
+            
+        
+        @attrs
+    
+
+   isa(obj, check 
+       check-class := check.WHAT;
+       i := nqp::elems(@!mro;
+        while i > 0 
+            i := i - 1;
+            if @!mro[i =:= check-class 
+               1;
+            
+        
+       0;
+    
+
+   does(obj, check 
+       i := nqp::elems(@!done;
+        while i > 0 
+            i := i - 1;
+            if @!done[i =:= check 
+               1;
+            
+        
+       0;
+    
+
+   can(obj, name 
+        for @!mro 
+           %meths := _.HOW.method_table(obj;
+           can := %methsname;
+            if nqp::defined(can 
+               can;
+            
+        
+       0;
+    
+
+   find_method(obj, name, :no_fallback = 0, :no_trace = 0 
+        for @!mro 
+           %meths := _.HOW.method_table(obj;
+            if nqp::existskey(%meths, name 
+               found := %methsname;
+               !trace && !no_trace && self.should_trace(obj, name
+                    ?? self.make_tracer(name, found
+                    !! found;
+            
+        
+        nqp::null(
+    
+
+   cache(obj, key, value_generator 
+       %orig_cache := %!caches;
+        nqp::ishash(%orig_cache && nqp::existskey(%!caches, key
+            ?? %!cacheskey
+            !! self.cache_add(obj, key, value_generator(
+    
+
+   flush_cache(obj 
+        nqp::scwbdisable(;
+        %!caches :=  unless nqp::isnull(%!caches;
+        nqp::scwbenable(;
+    
+
+   cache_get(obj, key 
+       %caches := %!caches;
+        nqp::ishash(%caches ?? nqp::atkey(%caches, key !! nqp::null(
+    
+
+   cache_add(obj, key, value 
+       %orig_cache := %!caches;
+       %copy := nqp::ishash(%orig_cache ?? nqp::clone(%orig_cache !! ;
+        %copykey := value;
+        nqp::scwbdisable(;
+        %!caches := %copy;
+        nqp::scwbenable(;
+        value
+    
+
+    has @!mixin_cache;
+   set_is_mixin(obj  !is_mixin := 1 
+   is_mixin(obj  !is_mixin 
+
+   mixin(obj, role 
+ 
+       found := 0;
+       new_type;
+        unless nqp::isnull(@!mixin_cache 
+            for @!mixin_cache -> c_role, c_type 
+                if c_role =:= role 
+                    new_type := c_type;
+                    found := 1;
+                    last;
+                
+            
+        
+
+        unless found 
+ 
+            self.flush_cache(obj if !nqp::isnull(obj || self.is_mixin(obj;
+ 
+           new_name := self.name(obj ~ ~ role.HOW.name(role ~;
+
+ 
+ 
+            new_type := self.new_type(:name(new_name, :repr(obj.REPR;
+            new_type.HOW.set_is_mixin(new_type;
+            new_type.HOW.add_parent(new_type, obj.WHAT;
+            new_type.HOW.add_role(new_type, role;
+            new_type.HOW.compose(new_type;
+
+ 
+            nqp::scwbdisable(;
+            @!mixin_cache := [ if nqp::isnull(@!mixin_cache;
+            nqp::push(@!mixin_cache, role;
+            nqp::push(@!mixin_cache, new_type;
+            nqp::scwbenable(;
+            1;
+        
+
+        nqp::isconcrete(obj ??
+            nqp::rebless(obj, new_type !!
+            new_type
+    
+
+   trace-on(obj, depth?, :@exclude = <MATCH CAPHASH CREATE orig pos> 
+        !trace := 1;
+        !trace_depth := depth // 0;
+        @!trace_exclude := @exclude;
+       %trace_cache;
+       @mro_reversed := reverse(@!mro;
+        for @mro_reversed 
+            for _.HOW.method_table(_ 
+               name := nqp::iterkey_s(_;
+                %trace_cachename := self.should_trace(obj, name
+                    ?? self.make_tracer(name, nqp::iterval(_
+                    !! nqp::iterval(_;
+            
+        
+        nqp::setmethcache(obj, %trace_cache;
+    
+   trace-off(obj 
+        self.publish_method_cache(obj;
+        !trace := 0;
+    
+   make_tracer(name, found 
+        -> *@pos, *%named 
+            nqp::say(nqp::x, !trace_depth ~;
+            !trace_depth := !trace_depth + 1;
+           result := found(|@pos, |%named;
+            !trace_depth := !trace_depth - 1;
+            result
+        
+    
+   should_trace(obj, name 
+       0 if nqp::eqat(name,, 0;
+        for @!trace_exclude 
+           0 if name eq _;
+        
+        1;
+    
+    #asdfasdf
+    #
+

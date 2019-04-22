@@ -1,0 +1,674 @@
+knowhow NQPClassHOW {
+
+    has !;
+    has @!;
+    has %!;
+    has @!method_order;
+    has @!multi__to_incorporate;
+    has @!;
+    has @!;
+    has !default_parent;
+    has !d;
+    has @!;
+    has @!done;
+    has %!s;
+    has !;
+    has !trace;
+    has !;
+    has @!trace_eclude;
+    has @!;
+    has @!;
+
+   (asdasd
+
+    a::(
+    a.(
+
+    := Archetypes.( :(1, :(1 ;
+   ( {
+        
+    
+
+   (: = <anon> {
+       obj := nqp::(self;
+        obj.(:(;
+        obj
+    
+
+   (: = <anon> {
+        ! := ;
+        @! := nqp::(;
+        %! := nqp::(;
+        @!method_order := nqp::(;
+        @!multi__to_incorporate := nqp::(;
+        @! := nqp::(;
+        @! := nqp::(;
+        @! := nqp::(;
+        @!done := nqp::(;
+        @! := nqp::(;
+        @! := nqp::(;
+        ! := 0;
+        !trace := 0;
+        ! := 0;
+        !d := 0;
+    
+
+   (: = <anon>, : = P6opaque {
+       metaclass := self.(:(;
+        nqp::(
+            nqp::(nqp::(metaclass, , {,
+            ;
+    
+
+   (obj, , code_obj {
+        if nqp::(%!,  {
+            nqp::(This class already has ad  ~ ;
+        
+        if nqp::(code_obj || !nqp::(code_obj {
+            nqp::(Cannot add a  to class !;
+        
+        nqp::(obj, 0;
+        %!s{nqp::(self := { unless nqp::(%!s;
+        nqp::(@!method_order, %!{ := code_obj;
+    
+
+   (obj, , code_obj {
+
+       %todo;
+        %todo<> := ;
+        %todo<code> := code_obj;
+        nqp::(@!multi__to_incorporate, %todo;
+        nqp::(obj, 0;
+        code_obj;
+    
+
+   (obj, meta_attr {
+        := meta_attr.;
+        for @! {
+            if _. eq  {
+                nqp::(This class already has an attribute d  ~ ;
+            
+        
+        nqp::(@!, meta_attr;
+    
+
+   (obj, parent {
+        if !d {
+            nqp::(NQPClassHOW  not support adding  after being d.;
+        
+        if obj =:= parent {
+            nqp::(Class ! not inherit from itself.;
+        
+        for @! {
+            if _ =:= parent {
+                nqp::(Already have  ~ parent ~  as a parent class.;
+            
+        
+        nqp::(@!, parent;
+    
+
+   (obj, parent {
+        !default_parent := parent;
+    
+
+   (obj, _parent {
+        if nqp::(@! != 1 {
+            nqp::(Can only re-parent a class with eactly one parent;
+        
+        for @![0.HOW.(@![0 {
+            if nqp::(_.HOW.(_, : {
+                nqp::(Can only re-parent a class whose parent has no ;
+            
+        
+        for _parent.HOW.(_parent {
+            if nqp::(_.HOW.(_, : {
+                nqp::(Can only re-parent to a class with no ;
+            
+        
+        @![0 := _parent;
+        @! := (obj;
+        self.(obj;
+        self.(obj;
+        self.(obj;
+        1;
+    
+
+   (obj, role {
+        for @! {
+            if _ =:= role {
+                nqp::(The role  ~ role ~  has already been added.;
+            
+        
+        nqp::(@!, role;
+    
+
+   (obj {
+
+        if @! {
+           @d_;
+            for @! {
+               ins := _.HOW.(_, obj;
+                nqp::(@d_, ins;
+                nqp::(@!done, _;
+                nqp::(@!done, ins;
+            
+            RoleToClassApplier.(obj, @d_;
+        
+
+        if nqp::(@! == 0 && ! ne NQPMu {
+            self.(obj, !default_parent
+        
+
+        @! := (obj;
+
+        self.(obj;
+
+        for self.(obj, :(0  { _.(obj 
+
+        self.(obj;
+        self.(obj;
+        self.(obj;
+
+        self.(obj;
+
+        unless !d {
+            self.(obj;
+        
+
+        !d := 1;
+
+        obj
+    
+
+   (obj {
+
+       @_info;
+
+        for @! -> type_obj {
+           @type_info;
+            nqp::(@_info, @type_info;
+
+            nqp::(@type_info, type_obj;
+
+           @attrs;
+            nqp::(@type_info, @attrs;
+            for type_obj.HOW.(type_obj, : -> attr {
+               %attr_info;
+                %attr_info<> := attr.;
+                %attr_info<type> := attr.type;
+                if attr.bo_target {
+ 
+                    %attr_info<bo_target> := 1;
+                
+                if nqp::(attr, auto_viv_container {
+                    %attr_info<auto_viv_container> := attr.auto_viv_container;
+                
+                if attr.positional_delegate {
+                    %attr_info<positional_delegate> := 1;
+                
+                if attr.associative_delegate {
+                    %attr_info<associative_delegate> := 1;
+                
+                nqp::(@attrs, %attr_info;
+            
+
+            nqp::(@type_info, type_obj.HOW.(type_obj, :;
+        
+
+       info := nqp::(;
+        info<attribute> := @_info;
+        nqp::(obj, info
+    
+
+   (obj {
+       num_todo := nqp::(@!multi__to_incorporate;
+       i := 0;
+        while i != num_todo {
+ 
+            := @!multi__to_incorporate[i<>;
+           code := @!multi__to_incorporate[i<code>;
+
+           dispatcher := %!{;
+            if nqp::(dispatcher {
+
+                if nqp::(dispatcher, is_dispatcher && dispatcher.is_dispatcher {
+                    dispatcher.(code;
+                
+               {
+                    nqp::(Cannot have a multi didate for  when an onlyis also in the class;
+                
+            
+           {
+ 
+               j := 1;
+                := 0;
+                while j != nqp::(@! && ! {
+                   parent := @![j;
+                   %meths := parent.HOW.(parent;
+                   dispatcher := %meths{;
+                    if nqp::(dispatcher {
+
+                        if nqp::(dispatcher, is_dispatcher && dispatcher.is_dispatcher {
+                           _disp := dispatcher.(;
+                            _disp.(code;
+                            %!{ := _disp;
+                             := 1;
+                        
+                       {
+                            nqp::(Could not find a proto for multi  (it may eist, but an only is hiding it if so;
+                        
+                    
+                    j := j + 1;
+                
+                unless  {
+                    nqp::(Could not find a proto for multi , and proto generation is NYI;
+                
+            
+            i := i + 1;
+        
+    
+
+   (class {
+       @immediate_ := class.HOW.(class, :;
+
+       @result;
+        if nqp::(@immediate_ {
+            if nqp::(@immediate_ == 1 {
+                @result := (@immediate_[0;
+            {
+ 
+               @merge_;
+                for @immediate_ {
+                    nqp::(@merge_, (_;
+                
+                nqp::(@merge_, @immediate_;
+                @result := (@merge_;
+            
+        
+
+        nqp::(@result, class;
+       @result;
+    
+
+   (@merge_ {
+       @result;
+       accepted;
+       something_accepted := 0;
+       d_count := 0;
+
+        for @merge_ {
+           @d_ := _;
+            if @d_ {
+               rejected := 0;
+               d_class := @d_[0;
+                d_count := d_count + 1;
+                for @merge_ {
+ 
+                    unless _ =:= @d_ {
+ 
+                       cur_pos := 1;
+                        while cur_pos <= nqp::(_ {
+                            if _[cur_pos =:= d_class {
+                                rejected := 1;
+                            
+                            cur_pos := cur_pos + 1;
+                        
+                    
+                
+
+                unless rejected {
+                    accepted := d_class;
+                    something_accepted := 1;
+                    last;
+                
+            
+        
+
+        if d_count == 0 {
+           @result;
+        
+
+        unless something_accepted {
+            nqp::(Could not build C3 linearization: ambiguous hierarchy;
+        
+
+       i := 0;
+        while i < nqp::(@merge_ {
+           @_;
+            for @merge_[i {
+                unless _ =:= accepted {
+                    nqp::(@_, _;
+                
+            
+            @merge_[i := @_;
+            i := i + 1;
+        
+
+        @result := (@merge_;
+        nqp::(@result, accepted;
+       @result;
+    
+
+   (obj {
+       @tc;
+
+        for self.(obj {
+            nqp::(@tc, _;
+            if nqp::(_.HOW,  {
+                for _.HOW.(_ {
+                    nqp::(@tc, _;
+                
+            
+        
+
+        nqp::(obj, @tc
+    
+
+   (@in {
+       @out;
+        for @in { nqp::(@out, _ 
+        @out
+    
+
+   (obj {
+
+       %;
+       @_d := (@!;
+        for @_d {
+            for _.HOW.(_ {
+                %{nqp::(_ := nqp::(_;
+            
+        
+        nqp::(obj, %;
+        nqp::(obj, 1;
+    
+
+   (obj {
+       bool_meth := self.(obj, Bool;
+        if nqp::(bool_meth {
+            nqp::(obj, 0, bool_meth
+        
+       {
+            nqp::(obj, 5, nqp::(
+        
+    
+
+   (obj {
+ 
+       @plan;
+       @attrs := obj.HOW.(obj, :(1;
+
+       build := obj.HOW.(obj<>;
+        if nqp::(build {
+ 
+            nqp::(@plan, build;
+        
+       {
+
+            for @attrs {
+               attr_ := _.;
+                     := nqp::(attr_, 2;
+               sigil     := nqp::(attr_, 0, 1;
+               sigop     := sigil eq @ ?? 11 !! sigil eq % ?? 12 !! 0;
+                nqp::(@plan, [sigop, obj, attr_, ;
+            
+        
+
+        for @attrs {
+            if nqp::(_, build {
+               default := _.build;
+                if nqp::(default {
+                    nqp::(@plan, [4, obj, _., default;
+                
+            
+        
+
+        @! := @plan;
+
+       @all_plan;
+       @ := self.(obj;
+       i := nqp::(@;
+        while i > 0 {
+            i := i - 1;
+           class := @[i;
+            for class.HOW.(class {
+                nqp::(@all_plan, _;
+            
+        
+        @! := @all_plan;
+    
+
+   (obj {
+        @!
+    
+
+   (obj {
+        @!
+    
+
+   (obj, : = 0 {
+         ?? @! !! @!
+    
+
+   (obj {
+        @!
+    
+
+   (obj, :! {
+        @!
+    
+
+   (obj {
+        @!done;
+    
+
+   (obj, : = 0, :all {
+        if  {
+            @!method_order
+        
+       {
+           @meths;
+            for @! {
+                for _.HOW.(_, : {
+                    nqp::(@meths, _
+                
+            
+            @meths
+        
+    
+
+   (obj {
+        %!
+    
+
+   (obj {
+        !
+    
+
+   (obj {
+       @parts := nqp::(::, self.(obj // ;
+        @parts ?? @parts[nqp::(@parts - 1 !! <anon>
+    
+
+   (obj {
+        !trace
+    
+
+   (obj {
+        !
+    
+
+   (obj, : = 0 {
+       @attrs;
+        if  {
+            for @! {
+                nqp::(@attrs, _;
+            
+        
+       {
+            for @! {
+                for _.HOW.(_, : {
+                    nqp::(@attrs, _;
+                
+            
+        
+        @attrs
+    
+
+   (obj, check {
+       check-class := check.WHAT;
+       i := nqp::(@!;
+        while i > 0 {
+            i := i - 1;
+            if @![i =:= check-class {
+               1;
+            
+        
+       0;
+    
+
+   (obj, check {
+       i := nqp::(@!done;
+        while i > 0 {
+            i := i - 1;
+            if @!done[i =:= check {
+               1;
+            
+        
+       0;
+    
+
+   (obj,  {
+        for @! {
+           %meths := _.HOW.(obj;
+            := %meths{;
+            if nqp::( {
+               ;
+            
+        
+       0;
+    
+
+   (obj, , :no_fallback = 0, :no_trace = 0 {
+        for @! {
+           %meths := _.HOW.(obj;
+            if nqp::(%meths,  {
+                := %meths{;
+               !trace && !no_trace && self.(obj, 
+                    ?? self.(, 
+                    !! ;
+            
+        
+        nqp::(
+    
+
+   (obj, key,  {
+       %orig_ := %!s;
+        nqp::(%orig_ && nqp::(%!s, key
+            ?? %!s{key
+            !! self.(obj, key, (
+    
+
+   (obj {
+        nqp::(;
+        %!s := { unless nqp::(%!s;
+        nqp::(;
+    
+
+   (obj, key {
+       %s := %!s;
+        nqp::(%s ?? nqp::(%s, key !! nqp::(
+    
+
+   (obj, key, value {
+       %orig_ := %!s;
+       %copy := nqp::(%orig_ ?? nqp::(%orig_ !! {;
+        %copy{key := value;
+        nqp::(;
+        %!s := %copy;
+        nqp::(;
+        value
+    
+
+    has @!_;
+   (obj { ! := 1 
+   (obj { ! 
+
+   (obj, role {
+ 
+        := 0;
+       ;
+        unless nqp::(@!_ {
+            for @!_ -> c_role, c_type {
+                if c_role =:= role {
+                     := c_type;
+                     := 1;
+                    last;
+                
+            
+        
+
+        unless  {
+ 
+            self.(obj if !nqp::(obj || self.(obj;
+ 
+           _ := self.(obj ~ +{ ~ role.HOW.(role ~ ;
+
+ 
+ 
+             := self.(:(_, :(obj.REPR;
+            .HOW.(;
+            .HOW.(, obj.WHAT;
+            .HOW.(, role;
+            .HOW.(;
+
+ 
+            nqp::(;
+            @!_ := [ if nqp::(@!_;
+            nqp::(@!_, role;
+            nqp::(@!_, ;
+            nqp::(;
+            1;
+        
+
+        nqp::(obj ??
+            nqp::(obj,  !!
+            
+    
+
+   (obj, depth?, :@eclude = <MATCH CAPHASH CREATE orig pos> {
+        !trace := 1;
+        ! := depth // 0;
+        @!trace_eclude := @eclude;
+       %trace_;
+       @_d := (@!;
+        for @_d {
+            for _.HOW.(_ {
+                := nqp::(_;
+                %trace_{ := self.(obj, 
+                    ?? self.(, nqp::(_
+                    !! nqp::(_;
+            
+        
+        nqp::(obj, %trace_;
+    
+   (obj {
+        self.(obj;
+        !trace := 0;
+    
+   (,  {
+        -> *@pos, *%d {
+            nqp::(nqp::(  , ! ~ Calling ;
+            ! := ! + 1;
+           result := (|@pos, |%d;
+            ! := ! - 1;
+            result
+        
+    
+   (obj,  {
+       0 if nqp::(, !, 0;
+        for @!trace_eclude {
+           0 if  eq _;
+        
+        1;
+    

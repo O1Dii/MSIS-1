@@ -1,0 +1,684 @@
+knowhow NQPClassHOW 
+
+ 
+
+ 
+ 
+ 
+ 
+ 
+
+ has name 
+ has attributes 
+ has methods 
+ has method_order 
+ has multi_methods_to_incorporate 
+ has parents 
+ has roles 
+ has default_parent 
+ has com ed 
+ has mro 
+ has done 
+ has caches 
+ has is_mixin 
+ has trace 
+ has trace_depth 
+ has trace_exclude 
+ has BUILDALLPLAN 
+ has BUILDPLAN 
+
+ asdasd
+
+ 
+ 
+
+ archetypes     
+ 
+ archetypes
+ 
+
+ name 
+ obj self 
+ name 
+ obj
+ 
+
+ name 
+ name name 
+ attributes 
+ methods 
+ method_order 
+ multi_methods_to_incorporate 
+ parents 
+ roles 
+ mro 
+ done 
+ BUILDALLPLAN 
+ BUILDPLAN 
+ is_mixin   
+ trace   
+ trace_depth   
+ com ed   
+ 
+
+ name repr 
+ metaclass name 
+ 
+ metaclass repr 
+ name 
+ 
+
+ obj name code_obj 
+ methods name 
+ nqp name 
+ 
+ code_obj code_obj 
+ nqp 
+ 
+ obj   
+ self caches 
+ method_order methodsname code_obj 
+ 
+
+ obj name code_obj 
+
+ todo 
+ todo name 
+ todo code_obj 
+ multi_methods_to_incorporate todo 
+ obj   
+ code_obj 
+ 
+
+ obj meta_attr 
+ name meta_attr name 
+ attributes 
+ _ name name 
+ nqp name 
+ 
+ 
+ attributes meta_attr 
+ 
+
+ obj parent 
+ com ed 
+ nqp 
+ 
+ obj parent 
+ nqp 
+ 
+ parents 
+ _ parent 
+ nqp parent 
+ 
+ 
+ parents parent 
+ 
+
+ obj parent 
+ default_parent parent 
+ 
+
+ obj new_parent 
+ parents   
+ nqp 
+ 
+ parents   
+ _ 
+ nqp 
+ 
+ 
+ new_parent 
+ _ 
+ nqp 
+ 
+ 
+ parents   new_parent 
+ mro obj 
+ obj 
+ obj 
+ obj 
+   
+ 
+
+ obj role 
+ roles 
+ _ role 
+ nqp role 
+ 
+ 
+ roles role 
+ 
+
+ obj 
+
+ roles 
+ specialized_roles 
+ roles 
+ ins _ obj 
+ specialized_roles ins 
+ done _ 
+ done ins 
+ 
+ obj specialized_roles 
+ 
+
+ parents   name ne 
+ obj default_parent
+ 
+
+ mro obj 
+
+ obj 
+
+ obj   obj 
+
+ obj 
+ obj 
+ obj 
+
+ obj 
+
+ com ed 
+ obj 
+ 
+
+ com ed   
+
+ obj
+ 
+
+ obj 
+
+ repr_info 
+
+ mro type_obj 
+ type_info 
+ repr_info type_info 
+
+ type_info type_obj 
+
+ attrs 
+ type_info attrs 
+ type_ type_obj attr 
+ attr_info 
+ attr_info attr name 
+ attr_info attr type 
+ attr box_target 
+ 
+ attr_info   
+ 
+ attr 
+ attr_info attr auto_viv_container 
+ 
+ attr itional_delegate 
+ attr_info   
+ 
+ attr associative_delegate 
+ attr_info   
+ 
+ attrs attr_info 
+ 
+
+ type_info type_obj 
+ 
+
+ info 
+ info repr_info 
+ obj info
+ 
+
+ obj 
+ num_todo multi_methods_to_incorporate 
+ i   
+ i num_todo 
+ 
+ name multi_methods_to_incorporate i 
+ code multi_methods_to_incorporate i 
+
+ dispatcher methodsname 
+ dispatcher 
+
+ dispatcher dispatcher is_dispatcher 
+ code 
+ 
+ 
+ nqp 
+ 
+ 
+ 
+ 
+ j   
+ found   
+ j mro found 
+ parent mro j 
+ meths parent 
+ dispatcher methsname 
+ dispatcher 
+
+ dispatcher dispatcher is_dispatcher 
+ new_disp 
+ code 
+ methodsname new_disp 
+ found   
+ 
+ 
+ nqp 
+ 
+ 
+ j j   
+ 
+ found 
+ nqp 
+ 
+ 
+ i i   
+ 
+ 
+
+ class 
+ immediate_parents class 
+
+ result 
+ immediate_parents 
+ immediate_parents   
+ result immediate_parents   
+ 
+ 
+ merge_list 
+ immediate_parents 
+ merge_list _ 
+ 
+ merge_list immediate_parents 
+ result merge_list 
+ 
+ 
+
+ result class 
+ result 
+ 
+
+ merge_list 
+ result 
+ accepted 
+ something_accepted   
+ cand_count   
+
+ merge_list 
+ cand_list _ 
+ cand_list 
+ rejected   
+ cand_class cand_list   
+ cand_count cand_count   
+ merge_list 
+ 
+ _ cand_list 
+ 
+ cur_   
+ cur_ _ 
+ _ cur_ cand_class 
+ rejected   
+ 
+ cur_ cur_   
+ 
+ 
+ 
+
+ rejected 
+ accepted cand_class 
+ something_accepted   
+ 
+ 
+ 
+ 
+
+ cand_count   
+ result 
+ 
+
+ something_accepted 
+ nqp 
+ 
+
+ i   
+ i merge_list 
+ new_list 
+ merge_list i 
+ _ accepted 
+ new_list _ 
+ 
+ 
+ merge_list i new_list 
+ i i   
+ 
+
+ result merge_list 
+ result accepted 
+ result 
+ 
+
+ obj 
+ tc 
+
+ obj 
+ tc _ 
+ _ HOW 
+ _ 
+ tc _ 
+ 
+ 
+ 
+
+ obj tc
+ 
+
+ in 
+ out 
+ in out _ 
+ out
+ 
+
+ obj 
+
+ cache 
+ mro_ d mro 
+ mro_ d 
+ _ 
+ _ _ 
+ 
+ 
+ obj cache 
+ obj   
+ 
+
+ obj 
+ bool_meth obj 
+ bool_meth 
+ obj   bool_meth
+ 
+ 
+ obj   
+ 
+ 
+
+ obj 
+ 
+ plan 
+ attrs obj   
+
+ build obj 
+ build 
+ 
+ plan build 
+ 
+ 
+
+ attrs 
+ attr_name _ name 
+ name attr_name   
+ sigil attr_name     
+ sigop sigil    sigil      
+ plan sigop obj attr_name name 
+ 
+ 
+
+ attrs 
+ _ 
+ default _ build 
+ default 
+ plan   obj _ name default 
+ 
+ 
+ 
+
+ BUILDPLAN plan 
+
+ all_plan 
+ mro obj 
+ i mro 
+ i   
+ i i   
+ class mro i 
+ class 
+ all_plan _ 
+ 
+ 
+ BUILDALLPLAN all_plan 
+ 
+
+ obj 
+ BUILDPLAN
+ 
+
+ obj 
+ BUILDALLPLAN
+ 
+
+ obj   
+ parents mro
+ 
+
+ obj 
+ mro
+ 
+
+ obj 
+ roles
+ 
+
+ obj 
+ done 
+ 
+
+ obj   all 
+ 
+ method_order
+ 
+ 
+ meths 
+ mro 
+ _ 
+ meths _
+ 
+ 
+ meths
+ 
+ 
+
+ obj 
+ methods
+ 
+
+ obj 
+ name
+ 
+
+ obj 
+ parts nqp split obj 
+ parts parts parts   
+ 
+
+ obj 
+ trace
+ 
+
+ obj 
+ trace_depth
+ 
+
+ obj   
+ attrs 
+ 
+ attributes 
+ attrs _ 
+ 
+ 
+ 
+ mro 
+ _ 
+ attrs _ 
+ 
+ 
+ 
+ attrs
+ 
+
+ obj check 
+ check class check WHAT 
+ i mro 
+ i   
+ i i   
+ mro i check class 
+   
+ 
+ 
+   
+ 
+
+ obj check 
+ i done 
+ i   
+ i i   
+ done i check 
+   
+ 
+ 
+   
+ 
+
+ obj name 
+ mro 
+ meths obj 
+ can methsname 
+ can 
+ can 
+ 
+ 
+   
+ 
+
+ obj name no_fallback   no_trace   
+ mro 
+ meths obj 
+ meths name 
+ found methsname 
+ trace no_trace obj name
+ name found
+ found 
+ 
+ 
+ 
+ 
+
+ obj key value_generator 
+ orig_cache caches 
+ orig_cache caches key
+ cacheskey
+ obj key 
+ 
+
+ obj 
+ 
+ caches caches 
+ 
+ 
+
+ obj key 
+ caches caches 
+ caches caches key 
+ 
+
+ obj key value 
+ orig_cache caches 
+ copy orig_cache orig_cache 
+ copykey value 
+ 
+ caches copy 
+ 
+ value
+ 
+
+ has mixin_cache 
+ obj is_mixin   
+ obj is_mixin 
+
+ obj role 
+ 
+ found   
+ new_type 
+ mixin_cache 
+ mixin_cache c_role c_type 
+ c_role role 
+ new_type c_type 
+ found   
+ 
+ 
+ 
+ 
+
+ found 
+ 
+ obj obj obj 
+ 
+ new_name obj role 
+
+ 
+ 
+ new_type new_name obj REPR 
+ new_type 
+ new_type obj WHAT 
+ new_type role 
+ new_type 
+
+ 
+ 
+ mixin_cache mixin_cache 
+ mixin_cache role 
+ mixin_cache new_type 
+ 
+   
+ 
+
+ obj 
+ obj new_type 
+ new_type
+ 
+
+ obj depth exclude 
+ trace   
+ trace_depth depth   
+ trace_exclude exclude 
+ trace_cache 
+ mro_ d mro 
+ mro_ d 
+ _ 
+ name _ 
+ trace_cachename obj name
+ name _
+ _ 
+ 
+ 
+ obj trace_cache 
+ 
+ obj 
+ obj 
+ trace   
+ 
+ name found 
+ named 
+ nqp x trace_depth 
+ trace_depth trace_depth   
+ result named 
+ trace_depth trace_depth   
+ result
+ 
+ 
+ obj name 
+   name   
+ trace_exclude 
+   name _ 
+ 
+   
+ 
+ 
+ 

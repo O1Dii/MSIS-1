@@ -1,0 +1,673 @@
+knowhow NQPClassHOW 
+
+    has !name;
+    has @!attributes;
+    has %!methods;
+    has @!method_order;
+    has @!multi_methods_to_incorporate;
+    has @!parents;
+    has @!roles;
+    has !default_parent;
+    has !composed;
+    has @!mro;
+    has @!done;
+    has %!caches;
+    has !is_mixin;
+    has !trace;
+    has !trace_depth;
+    has @!trace_exclude;
+    has @!BUILDALLPLAN;
+    has @!BUILDPLAN;
+
+   asdasd
+
+     
+     
+    a:: 
+
+   archetypes :=    1,  1 ;
+    
+        archetypes
+    
+
+   :name = 
+       obj :=  self;
+          name;
+        obj
+    
+
+   :name = 
+        !name := name;
+        @!attributes :=  ;
+        %!methods :=  ;
+        @!method_order :=  ;
+        @!multi_methods_to_incorporate :=  ;
+        @!parents :=  ;
+        @!roles :=  ;
+        @!mro :=  ;
+        @!done :=  ;
+        @!BUILDALLPLAN :=  ;
+        @!BUILDPLAN :=  ;
+        !is_mixin := 0;
+        !trace := 0;
+        !trace_depth := 0;
+        !composed := 0;
+    
+
+   :name =, :repr = 
+       meta :=   name;
+         
+              meta, repr, ,
+            name;
+    
+
+   obj, name, code_obj 
+        if  %!methods, name 
+            nqp::die ~ name;
+        
+        if  code_obj || ! code_obj 
+            nqp::die;
+        
+         obj, 0;
+        %! self :=  unless  %!caches;
+         @!method_order, %!methodsname := code_obj;
+    
+
+   obj, name, code_obj 
+
+       %todo;
+        %todo< > := name;
+        %todo< > := code_obj;
+         @!multi_methods_to_incorporate, %todo;
+         obj, 0;
+        code_obj;
+    
+
+   obj, meta_attr 
+       name := meta_attr.name;
+        for @!attributes 
+            if _.name eq name 
+                nqp::die ~ name;
+            
+        
+         @!attributes, meta_attr;
+    
+
+   obj, parent 
+        if !composed 
+            nqp::die;
+        
+        if obj =:= parent 
+            nqp::die;
+        
+        for @!parents 
+            if _ =:= parent 
+                nqp::die ~ parent ~;
+            
+        
+         @!parents, parent;
+    
+
+   obj, parent 
+        !default_parent := parent;
+    
+
+   obj, new_parent 
+        if  @!parents != 1 
+            nqp::die;
+        
+        for @! @!parents[0 
+            if   _, :local 
+                nqp::die;
+            
+        
+        for  new_parent 
+            if   _, :local 
+                nqp::die;
+            
+        
+        @!parents[0 := new_parent;
+        @!mro := obj;
+         obj;
+         obj;
+         obj;
+        1;
+    
+
+   obj, role 
+        for @!roles 
+            if _ =:= role 
+                nqp::die ~ role ~;
+            
+        
+         @!roles, role;
+    
+
+   obj 
+
+        if @!roles 
+           @specialized_roles;
+            for @!roles 
+               ins :=  _, obj;
+                 @specialized_roles, ins;
+                 @!done, _;
+                 @!done, ins;
+            
+             obj, @specialized_roles;
+        
+
+        if  @!parents == 0 && !name ne 
+             obj, !default_parent
+        
+
+        @!mro := obj;
+
+         obj;
+
+        for  obj,  0    obj 
+
+         obj;
+         obj;
+         obj;
+
+         obj;
+
+        unless !composed 
+             obj;
+        
+
+        !composed := 1;
+
+        obj
+    
+
+   obj 
+
+       @repr_info;
+
+        for @!mro -> type_obj 
+           @type_info;
+             @repr_info, @type_info;
+
+             @type_info, type_obj;
+
+           @attrs;
+             @type_info, @attrs;
+            for type_ type_obj, :local -> attr 
+               %attr_info;
+                %attr_info< > := attr.name;
+                %attr_info< > := attr.type;
+                if attr.box_target 
+ 
+                    %attr_info< > := 1;
+                
+                if  attr, 
+                    %attr_info< > := attr.auto_viv_container;
+                
+                if attr.positional_delegate 
+                    %attr_info< > := 1;
+                
+                if attr.associative_delegate 
+                    %attr_info< > := 1;
+                
+                 @attrs, %attr_info;
+            
+
+             @type_info, type_obj type_obj, :local;
+        
+
+       info :=  ;
+        info< > := @repr_info;
+         obj, info
+    
+
+   obj 
+       num_todo :=  @!multi_methods_to_incorporate;
+       i := 0;
+        while i != num_todo 
+ 
+           name := @!multi_methods_to_incorporate[i< >;
+           code := @!multi_methods_to_incorporate[i< >;
+
+           dispatcher := %!methodsname;
+            if  dispatcher 
+
+                if  dispatcher, && dispatcher.is_dispatcher 
+                     code;
+                
+               
+                    nqp::die;
+                
+            
+           
+ 
+               j := 1;
+               found := 0;
+                while j !=  @!mro && !found 
+                   parent := @!mro[j;
+                   %meths :=  parent;
+                   dispatcher := %methsname;
+                    if  dispatcher 
+
+                        if  dispatcher, && dispatcher.is_dispatcher 
+                           new_disp :=  ;
+                             code;
+                            %!methodsname := new_disp;
+                            found := 1;
+                        
+                       
+                            nqp::die;
+                        
+                    
+                    j := j + 1;
+                
+                unless found 
+                    nqp::die;
+                
+            
+            i := i + 1;
+        
+    
+
+    
+       @immediate_parents :=  , :local;
+
+       @result;
+        if  @immediate_parents 
+            if  @immediate_parents == 1 
+                @result := @immediate_parents[0;
+            
+ 
+               @merge_list;
+                for @immediate_parents 
+                     @merge_list, _;
+                
+                 @merge_list, @immediate_parents;
+                @result := @merge_list;
+            
+        
+
+         @result, ;
+       @result;
+    
+
+   @merge_list 
+       @result;
+       accepted;
+       something_accepted := 0;
+       cand_count := 0;
+
+        for @merge_list 
+           @cand_list := _;
+            if @cand_list 
+               rejected := 0;
+               cand_ := @cand_list[0;
+                cand_count := cand_count + 1;
+                for @merge_list 
+                    unless _ =:= @cand_list 
+ 
+                       cur_pos := 1;
+                        while cur_pos <=  _ 
+                            if _[cur_pos =:= cand_ 
+                                rejected := 1;
+                            
+                            cur_pos := cur_pos + 1;
+                        
+                    
+                
+
+                unless rejected 
+                    accepted := cand_;
+                    something_accepted := 1;
+                    last;
+                
+            
+        
+
+        if cand_count == 0 
+           @result;
+        
+
+        unless something_accepted 
+            nqp::die;
+        
+
+       i := 0;
+        while i <  @merge_list 
+           @new_list;
+            for @merge_list[i 
+                unless _ =:= accepted 
+                     @new_list, _;
+                
+            
+            @merge_list[i := @new_list;
+            i := i + 1;
+        
+
+        @result := @merge_list;
+         @result, accepted;
+       @result;
+    
+
+   obj 
+       @tc;
+
+        for  obj 
+             @tc, _;
+            if  _.HOW, 
+                for  _ 
+                     @tc, _;
+                
+            
+        
+
+         obj, @tc
+    
+
+   @in 
+       @out;
+        for @in   @out, _ 
+        @out
+    
+
+   obj 
+
+       %cache;
+       @mro_reversed := @!mro;
+        for @mro_reversed 
+            for  _ 
+                % _ :=  _;
+            
+        
+         obj, %cache;
+         obj, 1;
+    
+
+   obj 
+       bool_meth :=  obj,;
+        if  bool_meth 
+             obj, 0, bool_meth
+        
+       
+             obj, 5,  
+        
+    
+
+   obj 
+ 
+       @plan;
+       @attrs :=  obj,  1;
+
+       build :=  obj< >;
+        if  build 
+ 
+             @plan, build;
+        
+       
+
+            for @attrs 
+               attr_name := _.name;
+               name      :=  attr_name, 2;
+               sigil     :=  attr_name, 0, 1;
+               sigop     := sigil eq ?? 11 !! sigil eq ?? 12 !! 0;
+                 @plan, [sigop, obj, attr_name, name;
+            
+        
+
+        for @attrs 
+            if  _, 
+               default := _.build;
+                if  default 
+                     @plan, [4, obj, _.name, default;
+                
+            
+        
+
+        @!BUILDPLAN := @plan;
+
+       @all_plan;
+       @mro :=  obj;
+       i :=  @mro;
+        while i > 0 
+            i := i - 1;
+            := @mro[i;
+            for   
+                 @all_plan, _;
+            
+        
+        @!BUILDALLPLAN := @all_plan;
+    
+
+   obj 
+        @!BUILDPLAN
+    
+
+   obj 
+        @!BUILDALLPLAN
+    
+
+   obj, :local = 0 
+        local ?? @!parents !! @!mro
+    
+
+   obj 
+        @!mro
+    
+
+   obj, :local! 
+        @!roles
+    
+
+   obj 
+        @!done;
+    
+
+   obj, :local = 0, :all 
+        if local 
+            @!method_order
+        
+       
+           @meths;
+            for @!mro 
+                for  _, :local 
+                     @meths, _
+                
+            
+            @meths
+        
+    
+
+   obj 
+        %!methods
+    
+
+   obj 
+        !name
+    
+ _
+   obj 
+       @parts := nqp::split,  obj //;
+        @parts ?? @parts[ @parts - 1 !!
+    
+
+   obj 
+        !trace
+    
+
+   obj 
+        !trace_depth
+    
+
+   obj, :local = 0 
+       @attrs;
+        if local 
+            for @!attributes 
+                 @attrs, _;
+            
+        
+       
+            for @!mro 
+                for  _, :local 
+                     @attrs, _;
+                
+            
+        
+        @attrs
+    
+
+   obj, check 
+       check- := check.WHAT;
+       i :=  @!mro;
+        while i > 0 
+            i := i - 1;
+            if @!mro[i =:= check- 
+               1;
+            
+        
+       0;
+    
+
+   obj, check 
+       i :=  @!done;
+        while i > 0 
+            i := i - 1;
+            if @!done[i =:= check 
+               1;
+            
+        
+       0;
+    
+
+   obj, name 
+        for @!mro 
+           %meths :=  obj;
+           can := %methsname;
+            if  can 
+               can;
+            
+        
+       0;
+    
+   obj, name, :no_fallback = 0, :no_trace = 0 
+        for @!mro 
+           %meths :=  obj;
+            if  %meths, name 
+               found := %methsname;
+               !trace && !no_trace &&  obj, name
+                    ??  name, found
+                    !! found;
+            
+        
+         
+    
+
+   obj, key, value_generator 
+       %orig_cache := %!caches;
+         %orig_cache &&  %!caches, key
+            ?? %!cacheskey
+            !!  obj, key, 
+    
+
+   obj 
+         ;
+        %!caches :=  unless  %!caches;
+         ;
+    
+
+   obj, key 
+       %caches := %!caches;
+         %caches ??  %caches, key !!  
+    
+
+   obj, key, value 
+       %orig_cache := %!caches;
+       %copy :=  %orig_cache ??  %orig_cache !! ;
+        %copykey := value;
+         ;
+        %!caches := %copy;
+         ;
+        value
+    
+
+    has @!mixin_cache;
+   obj  !is_mixin := 1 
+   obj  !is_mixin 
+
+   obj, role 
+ 
+       found := 0;
+       new_type;
+        unless  @!mixin_cache 
+            for @!mixin_cache -> c_role, c_type 
+                if c_role =:= role 
+                    new_type := c_type;
+                    found := 1;
+                    last;
+                
+            
+        
+
+        unless found 
+ 
+             obj if ! obj ||  obj;
+ 
+           new_name :=  obj ~ ~  role ~;
+
+ 
+ 
+            new_type :=   new_name,  obj.REPR;
+             new_type;
+             new_type, obj.WHAT;
+             new_type, role;
+             new_type;
+
+ 
+             ;
+            @!mixin_cache := [ if  @!mixin_cache;
+             @!mixin_cache, role;
+             @!mixin_cache, new_type;
+             ;
+            1;
+        
+
+         obj ??
+             obj, new_type !!
+            new_type
+    
+
+   obj, depth?, :@exclude = < > 
+        !trace := 1;
+        !trace_depth := depth // 0;
+        @!trace_exclude := @exclude;
+       %trace_cache;
+       @mro_reversed := @!mro;
+        for @mro_reversed 
+            for  _ 
+               name :=  _;
+                %trace_cachename :=  obj, name
+                    ??  name,  _
+                    !!  _;
+            
+        
+         obj, %trace_cache;
+    
+   obj 
+         obj;
+        !trace := 0;
+    
+   name, found 
+        -> *@pos, *%named 
+             nqp::x, !trace_depth ~;
+            !trace_depth := !trace_depth + 1;
+           result := |@pos, |%named;
+            !trace_depth := !trace_depth - 1;
+            result
+        
+    
+   obj, name 
+       0 if  name,, 0;
+        for @!trace_exclude 
+           0 if name eq _;
+        
+        1;
+    
